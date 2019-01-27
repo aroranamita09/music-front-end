@@ -1,3 +1,11 @@
-<p>
-  playlist works!
-</p>
+<h2>This is your playlist</h2>
+
+<ul *ngFor="let playlist of Playlist" class="items">
+<li (click)="onSelect(playlistDetails)"><span class="badge">{{playlist.id}}:{{playlist.name}}:{{playlist.comments}}</span> 
+</li>
+<button (click)="addtoWishlist(track)">Add to Wishlist</button>
+<button (click)="addtoWishlist(track.comments)">Update Comments</button>
+<button (click)="delete(track.id)">Delete from Wishlist</button>
+</ul>
+<button (cilck)="displayAllTracks(track)">More</button>
+<h3>{{errorMsg}}</h3>

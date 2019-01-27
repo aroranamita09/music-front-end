@@ -1,3 +1,7 @@
 <p>
-  wishlist works!
+  This is your wishlist
 </p>
+<h3>{{errorMsg}}</h3>
+<ul  class="items">
+  <li *ngFor="let  playlist of playlists"> <span class="badge">{{playlist.name}}</span></li>
+</ul>

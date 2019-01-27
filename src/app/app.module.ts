@@ -10,10 +10,12 @@ import { DisplayAllTracksComponent } from './display-all-tracks/display-all-trac
 import { SearchTrackByNameComponent } from './search-track-by-name/search-track-by-name.component';
 import { GetFromLastFmService } from './get-from-last-fm.service';
 import { PostToMongoService } from './post-to-mongo.service';
+import { PlaylistService } from './playlist.service';
 import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TrackDetailsComponent } from './track-details/track-details.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +28,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SearchTrackByNameComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TrackDetailsComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [GetFromLastFmService, PostToMongoService],
+  providers: [GetFromLastFmService, PostToMongoService, PlaylistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

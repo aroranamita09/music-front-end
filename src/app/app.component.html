@@ -1,11 +1,13 @@
 <div style="text-align:center"> 
   <h1>
-    Welcome to {{ title }}!
+    Welcome to {{ title }}
   </h1>
 </div>
 <app-header></app-header>
 <nav>
  <a [routerLink]="[ '/playlist' ]" routerLinkActive="active">Playlist</a>
   <a [routerLink]="[ '/wishlist']" routerLinkActive="active">Wishlist</a>
+  <a [routerLink]="[ '/search']" routerLinkActive="active">Search</a>
+  <!-- <a [routerLink]="['/playlist/:id']" routerLinkActive="active">searchByid</a> -->
 </nav>
 <router-outlet></router-outlet>
